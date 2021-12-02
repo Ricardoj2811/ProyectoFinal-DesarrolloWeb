@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle:wght@300;400;700&family=Montserrat:wght@400;600;800&family=Roboto:ital,wght@0,100;0,700;1,400&display=swap');
+
+body{
+	font-family: 'Roboto', sans-serif;
+	}
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+
+/*Inicio del Header*/
+#header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #261f1f8a;
+	height: 120px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#header .nav{
+	flex-grow: 1;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#header .nav .active a{
+	color: #ccc;
+}
+
+#header .nav img{
+	width: 80px;
+	height: 80px;
+}
+
+#header .nav a{
+	color: #000000b0;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+/*Fin del Header*/
+
+/*Inicio Pagina home*/
+.contenedor{
+	display: grid;
+	grid-template-areas: 
+	"banner banner banner"
+	"anun anun anun"
+	"anun2 anun2 anun2"
+	"img1 img2 img3"
+	"footer footer footer";
+	justify-items: start;
+	height: 100vh;
+}
+
+.fondo2{
+	grid-area: banner;
+	background-image: url('../assets/collageHome.png');
+	background-size: cover;
+	align-self: stretch;
+	justify-self: stretch;
+	margin: auto;
+	width: 100%;
+}
+
+.fondo2 .letrero{
+	display: flex;
+	flex-direction: column;
+	color: #c786cca1;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 4rem;
+	font-weight: 400;
+	margin-top: 160px;
+	align-items: center;
+}
+
+.fondo2 .comprar{
+	display: flex;
+	margin-top: 120px;
+	flex-direction: column;
+	align-items: center;
+	color: black;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+/*Responsive Home*/
+@media all and (max-width: 768px){
+	.contenedor{
+		display: grid;
+		grid-template-areas: 
+		"banner"
+		"anun"
+		"anun2"
+		"img1"
+		"img2"
+		"img3"
+		"footer";
+		justify-items: start;
+		height: 100vh;
+	}
+
+	.fondo2{
+		grid-area: banner;
+		background-image: url('../assets/fondo2.jpg');
+		background-size: cover;
+		align-self: stretch;
+		justify-self: stretch;
+		margin: auto;
+		height: 100vh;
+		width: 100%;
+		object-fit: contain;
+	}
+
+	.fondo2 .letrero{
+		font-size: 3rem;
+	}
+
+	.fondo2 .comprar{
+		margin-top: 350px;
+	}
+
+}
+/*fin del responsive Home*/
+
+.letrero2{
+	color: pink;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2rem;
+	font-weight: 400;
+	height: auto;
+}
+
+.anuncio{
+	grid-area: anun;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.cartel{
+	grid-area: anun2;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	background-color: orange;
+}
+
+.img1{
+	grid-area: img1;
+	margin: auto;
+}
+
+.img1 img{
+	width:  100%;
+	height:  100%;
+}
+
+.img2{
+	grid-area: img2;
+	margin: auto;
+}
+
+.img2 img{
+	width:  100%;
+	height:  100%;
+}
+
+.img3{
+	grid-area: img3;
+	margin: auto;
+}
+
+.img3 img{
+	width: 100%;
+	height:  100%;
+}
+/*Fin Pagina home*/
+
+
+/* Inicio pagina Shop*/
+
+.fondo .productos{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	align-items: center;
+	margin-top: 130px;
+}
+
+.fondo .productos .nombre{
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+	background-color: gray;
+	font-size: 2rem;
+	font-weight: 700;
+	border: 2px solid black;
+	margin-bottom: 10px;
+}
+
+.fondo .productos img{
+	height: 180px;
+	max-width: 500px;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+/*Fin Pagina Shop*/
+
+/*Inicio Pagina Nuestra Historia*/
+
+.centrado{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-top: auto;
+	align-items: center;
+}
+
+.fondo .letrero{
+	margin-top: 120PX;
+	color: #c786cc;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 5rem;
+	font-weight: 400;
+}
+
+
+.fondo .imagenAbout img{
+	height: 310px;
+	max-width: 600px;
+	margin: auto;
+}
+
+.fondo .texto{
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	max-width: 1200px;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+
+/*Final de Pagina Nuestra Historia*/
+
+
+/*Inicio Pagina Blog*/
+.contenedor2{
+	display: grid;
+	grid-template-areas: 
+	"banner2 banner2 banner3"
+	"anun3 anun3 anun3"
+	"blog1 blog2 blog3"
+	"anun2 anun2 anun2"
+	"footer footer footer";
+	grid-column-gap: 3px;
+	justify-items: start;
+	height: 100vh;
+}
+
+.descripcion{
+	grid-area: banner3;
+	margin-top: 120px;
+	border: 5px solid black;
+}
+
+
+/*Inicio del Responsive Pagina Blog*/
+@media all and (max-width: 768px){
+	.contenedor2{
+	display: grid;
+	grid-template-areas: 
+	"banner2"
+	"banner3"
+	"anun3"
+	"blog1"
+	"anun2-1"
+	"blog2"
+	"anun2-2"
+	"blog3"
+	"anun2-3"
+	"footer";
+	grid-column-gap: 3px;
+	justify-items: start;
+	height: 100vh;
+	}
+
+	.descrip1{
+	grid-area: anun2-1;
+	}
+
+	.descrip2{
+		grid-area: anun2-2;
+	}
+
+	.descrip3{
+		grid-area: anun2-3;
+	}
+
+	.descripcion {
+	margin-top: 0;
+	border: 5px solid black;
+	}
+
+}
+/*Fin del Responsive Pagina Blog*/
+
+.principal{
+	grid-area: banner2;
+	margin-top: 120px;
+}
+
+.principal img{
+	width:  100%;
+	height:  100%;
+}
+
+.descripcion p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+}
+
+.letrero3{
+	grid-area: anun3;
+	width: 100%;
+	text-align: center;
+	color: #c786cc;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 4rem;
+	font-weight: 400;
+	background-color: #ffa5008f;
+}
+
+.blog1{
+	grid-area: blog1;
+	margin: auto;
+}
+
+.blog1 img{
+	width:  100%;
+	height: 100%;
+}
+
+.blog2{
+	grid-area: blog2;
+	margin: auto;
+}
+
+.blog2 img{
+	width:  100%;
+	height: 100%;
+}
+
+.blog3{
+	grid-area: blog3;
+	margin: auto;
+}
+
+.blog3 img{
+	width:  100%;
+	height: 100%;
+}
+
+.descrip1{
+	grid-area: anun2;
+}
+
+.descrip2{
+	grid-area: anun2;
+}
+
+.descrip3{
+	grid-area: anun2;
+}
+
+.letras{
+	width: 100%;
+	text-align: center;
+	color: black;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+/*Fin de la Pagina blog*/
+
+
+/*Inicio de la Pagina Contacto*/
+.fondo{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background-image: url('../assets/logo.jpg');
+	background-position: center;
+	background-repeat: repeat;
+}
+
+.formulario{
+	display: flex;
+	flex-direction: column;
+	max-width: 320px;
+	align-items: center;
+	margin: auto;
+	background-color: gray;
+	border: 2px solid black;
+	margin-top: 20px;
+}
+
+.fondo .tituloFormulario{
+	text-align: center;
+	margin-top: 150px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 2rem;
+	font-weight: 700;
+	background-color: gray;
+	border: 2px solid black;
+}
+
+.fondo .letras{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: gray;
+}
+
+.fondo .letra2{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: black;
+}
+
+.formulario input{
+	margin-top: 15px;
+}
+
+.formulario select{
+	margin-top: 15px;
+}
+
+.ubicacion iframe{
+	width: 100%;
+	height: 150px;
+	margin-top: 20px;
+}
+
+/*Fin de la Pagina Contacto*/
+
+/*Inicio footer*/
+#footer{
+	grid-area: footer;
+	width: 100%;
+	height: 80px;
+	background-color: #261f1f8a;
+}
+
+#footer .redes{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#footer p{
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	color: white;
+}
+
+#footer .redes img{
+	width: 40px;
+	height: 40px;
+}
+
+/*Fin footer*/
+
