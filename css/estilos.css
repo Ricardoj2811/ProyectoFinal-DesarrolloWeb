@@ -15,12 +15,14 @@ box-sizing: border-box;
 #header{
 	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
 	background-color: #261f1f8a;
 	height: 120px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	z-index: 1000;
 }
 
 #header .nav{
@@ -32,6 +34,7 @@ box-sizing: border-box;
 	align-items: center;
 }
 
+
 #header .nav .active a{
 	color: #ccc;
 }
@@ -41,12 +44,21 @@ box-sizing: border-box;
 	height: 80px;
 }
 
+#header .nav img:hover{
+	transform: scale(1.5);
+}
+
 #header .nav a{
 	color: #000000b0;
 	text-decoration: none;
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	font-weight: 700;
+}
+
+#header .nav a:hover{
+	color: orange;
+	font-size: 1.6rem;
 }
 
 /*Fin del Header*/
@@ -74,6 +86,15 @@ box-sizing: border-box;
 	width: 100%;
 }
 
+@keyframes letrero5{
+	0%{
+		color:#c786cc ;
+	}
+
+	100%{
+		color: #9364b9;
+	}
+}
 .fondo2 .letrero{
 	display: flex;
 	flex-direction: column;
@@ -83,6 +104,11 @@ box-sizing: border-box;
 	font-weight: 400;
 	margin-top: 160px;
 	align-items: center;
+	animation-name: letrero5;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-delay: 0.01s;
 }
 
 .fondo2 .comprar{
@@ -212,7 +238,7 @@ box-sizing: border-box;
 
 .fondo .productos img{
 	height: 180px;
-	max-width: 500px;
+	max-width: 400px;
 	border: 2px solid black;
 	border-radius: 10px;
 }
@@ -244,6 +270,20 @@ box-sizing: border-box;
 	margin: auto;
 }
 
+@media all and (max-width: 768px){
+
+	.fondo .letrero{
+		font-size: 3rem;
+		font-weight: 400;
+	}
+
+
+	.fondo .imagenAbout img{
+		height: 230px;
+		max-width: 400px;
+	}
+}
+
 .fondo .texto{
 	color: black;
 	font-family: 'Montserrat', sans-serif;
@@ -251,7 +291,7 @@ box-sizing: border-box;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	max-width: 1200px;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	font-weight: 500;
 }
 
