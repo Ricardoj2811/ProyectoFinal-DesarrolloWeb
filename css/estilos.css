@@ -310,6 +310,11 @@ box-sizing: border-box;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 5rem;
 	font-weight: 400;
+	animation-name: letrero5;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-delay: 0.01s;
 }
 
 
