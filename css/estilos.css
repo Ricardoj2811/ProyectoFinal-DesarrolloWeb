@@ -4,86 +4,42 @@ body{
 	font-family: 'Roboto', sans-serif;
 	}
 
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-}
-
 
 /*Inicio del Header*/
-#header{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: #261f1f8a;
-	height: 120px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	z-index: 1000;
+
+.bg-color{
+	background-color: #443636bf;
 }
 
-#header .nav{
-	flex-grow: 1;
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
+.navbar-brand img{
+	height: 50px;
+	width: 50px;
 }
 
-
-#header .nav .active a{
-	color: #ccc;
+.navbar-brand img:hover{
+	transform: scale(1.7)
 }
 
-#header .nav img{
-	width: 80px;
-	height: 80px;
-}
-
-#header .nav img:hover{
-	transform: scale(1.5);
-}
-
-#header .nav a{
+.navbar-nav .nav-item a{
 	color: #000000b0;
-	text-decoration: none;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2rem;
 	font-weight: 700;
 }
 
-#header .nav a:hover{
-	color: orange;
-	font-size: 1.6rem;
+.navbar-nav .nav-item a:hover{
+	color: orange !important;
 }
 
 /*Fin del Header*/
 
+
 /*Inicio Pagina home*/
-.contenedor{
-	display: grid;
-	grid-template-areas: 
-	"banner banner banner"
-	"anun anun anun"
-	"anun2 anun2 anun2"
-	"img1 img2 img3"
-	"footer footer footer";
-	justify-items: start;
-	height: 100vh;
-}
 
 .fondo2{
-	grid-area: banner;
 	background-image: url('../assets/collageHome.png');
 	background-size: cover;
-	align-self: stretch;
-	justify-self: stretch;
-	margin: auto;
-	width: 100%;
+	height: 600px;
 }
 
 @keyframes letrero5{
@@ -97,14 +53,11 @@ box-sizing: border-box;
 }
 
 .fondo2 .letrero{
-	display: flex;
-	flex-direction: column;
 	color: #c786cca1;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 4rem;
 	font-weight: 400;
 	margin-top: 160px;
-	align-items: center;
 	animation-name: letrero5;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
@@ -113,41 +66,21 @@ box-sizing: border-box;
 }
 
 .fondo2 .comprar{
-	display: flex;
-	margin-top: 120px;
-	flex-direction: column;
-	align-items: center;
 	color: black;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 2rem;
 	font-weight: 400;
+	position: absolute;
+	margin-top: 150px;
+	margin-left: -40px;
 }
 
 /*Responsive Home*/
 @media all and (max-width: 768px){
-	.contenedor{
-		display: grid;
-		grid-template-areas: 
-		"banner"
-		"anun"
-		"anun2"
-		"img1"
-		"img2"
-		"img3"
-		"footer";
-		justify-items: start;
-		height: 100vh;
-	}
 
 	.fondo2{
-		grid-area: banner;
 		background-image: url('../assets/fondo2.jpg');
 		background-size: cover;
-		align-self: stretch;
-		justify-self: stretch;
-		margin: auto;
-		height: 100vh;
-		width: 100%;
 		object-fit: contain;
 	}
 
@@ -156,9 +89,8 @@ box-sizing: border-box;
 	}
 
 	.fondo2 .comprar{
-		margin-top: 350px;
+		margin-top: 250px;
 	}
-
 }
 /*fin del responsive Home*/
 
@@ -190,71 +122,21 @@ box-sizing: border-box;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 2rem;
 	font-weight: 400;
-	height: auto;
-}
-
-.anuncio{
-	grid-area: anun;
-	width: 100%;
-	height: auto;
-	text-align: center;
 }
 
 .cartel{
-	grid-area: anun2;
-	width: 100%;
-	height: auto;
-	text-align: center;
 	background-color: orange;
 }
 
-.img1{
-	grid-area: img1;
-	margin: auto;
-}
-
-.img1 img{
-	width:  100%;
-	height:  100%;
-	transition: all 250ms ease-in-out;
-}
-
-.img1:hover img{
-		transform: scale(1.1);
-		box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+@media all and (min-width: 768px){
+	.container{
+		width: 400px !important;
 	}
 
-.img2{
-	grid-area: img2;
-	margin: auto;
-}
-
-.img2 img{
-	width:  100%;
-	height:  100%;
-	transition: all 250ms ease-in-out;
-}
-
-.img2:hover img{
-		transform: scale(1.1);
-		box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+	.carousel-item img{
+		max-height: 400px !important;
 	}
-
-.img3{
-	grid-area: img3;
-	margin: auto;
 }
-
-.img3 img{
-	width: 100%;
-	height:  100%;
-	transition: all 250ms ease-in-out;
-}
-
-.img3:hover img{
-		transform: scale(1.1);
-		box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-	}
 
 /*Fin Pagina home*/
 
@@ -570,19 +452,12 @@ box-sizing: border-box;
 /*Fin de la Pagina Contacto*/
 
 /*Inicio footer*/
-#footer{
-	grid-area: footer;
-	width: 100%;
-	height: 80px;
-	background-color: #261f1f8a;
-}
 
-#footer .redes{
-	list-style-type: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
+#footer{
+	height: 100%;
+	grid-area: footer;
+	margin-bottom: 0;
+	background-color: #261f1f8a;
 }
 
 #footer p{
@@ -591,11 +466,12 @@ box-sizing: border-box;
 	font-size: 1rem;
 	font-weight: 700;
 	color: white;
+	margin-bottom:0;
 }
 
-#footer .redes img{
-	width: 40px;
-	height: 40px;
+#footer .nav img{
+	width: 30px;
+	height: 30px;
 }
 
 /*Fin footer*/
