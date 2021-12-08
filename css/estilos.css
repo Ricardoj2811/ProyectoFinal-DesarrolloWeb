@@ -2,13 +2,14 @@
 
 body{
 	font-family: 'Roboto', sans-serif;
+	font-size: 400;
 	}
 
 
 /*Inicio del Header*/
 
 .bg-color{
-	background-color: #443636bf;
+	background-color: #261f1f8a;
 }
 
 .navbar-brand img{
@@ -143,34 +144,28 @@ body{
 
 /* Inicio pagina Shop*/
 
-.fondo .productos{
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	align-items: center;
-	margin-top: 130px;
+.comienzo{
+	margin-top: 80px !important;
 }
 
-.fondo .productos .nombre{
+.nombre{
 	color: black;
 	font-family: 'Montserrat', sans-serif;
 	background-color: gray;
 	font-size: 2rem;
 	font-weight: 700;
-	border: 2px solid black;
-	margin-bottom: 10px;
 }
 
-.fondo .productos img{
+.imagenes img{
 	height: 180px;
-	max-width: 400px;
-	border: 2px solid black;
-	border-radius: 10px;
+}
+
+.ampliacion{
 	transition: all 250ms ease-in-out;
 }
 
-.productos:hover img{
-	transform: scale(1.2);
+.ampliacion:hover{
+	transform: scale(1.1);
 	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
 }
 
@@ -178,27 +173,22 @@ body{
 
 /*Inicio Pagina Nuestra Historia*/
 
-.centrado{
-	display: flex;
-	flex-direction: column;
-	margin-top: 20px;
-	margin-top: auto;
-	align-items: center;
-}
 
 .fondo .letrero{
-	margin-top: 120PX;
 	color: #c786cc;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 5rem;
 	font-weight: 400;
+	animation-name: letrero6;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-delay: 0.01s;
 }
 
 
-.fondo .imagenAbout img{
+.imagenAbout img{
 	height: 310px;
-	max-width: 600px;
-	margin: auto;
 }
 
 @media all and (max-width: 768px){
@@ -208,20 +198,14 @@ body{
 		font-weight: 400;
 	}
 
-
-	.fondo .imagenAbout img{
-		height: 230px;
-		max-width: 400px;
+	.imagenAbout img{
+	height: 180px;
 	}
 }
 
 .fondo .texto{
 	color: black;
 	font-family: 'Montserrat', sans-serif;
-	margin: auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	max-width: 1200px;
 	font-size: 1.4rem;
 	font-weight: 500;
 }
@@ -231,70 +215,6 @@ body{
 
 
 /*Inicio Pagina Blog*/
-.contenedor2{
-	display: grid;
-	grid-template-areas: 
-	"banner2 banner2 banner3"
-	"anun3 anun3 anun3"
-	"blog1 blog2 blog3"
-	"anun2 anun2 anun2"
-	"footer footer footer";
-	grid-column-gap: 3px;
-	justify-items: start;
-	height: 100vh;
-}
-
-.descripcion{
-	grid-area: banner3;
-	margin-top: 120px;
-	border: 5px solid black;
-}
-
-
-/*Inicio del Responsive Pagina Blog*/
-@media all and (max-width: 768px){
-	.contenedor2{
-	display: grid;
-	grid-template-areas: 
-	"banner2"
-	"banner3"
-	"anun3"
-	"blog1"
-	"anun2-1"
-	"blog2"
-	"anun2-2"
-	"blog3"
-	"anun2-3"
-	"footer";
-	grid-column-gap: 3px;
-	justify-items: start;
-	height: 100vh;
-	}
-
-	.descrip1{
-	grid-area: anun2-1;
-	}
-
-	.descrip2{
-		grid-area: anun2-2;
-	}
-
-	.descrip3{
-		grid-area: anun2-3;
-	}
-
-	.descripcion {
-	margin-top: 0;
-	border: 5px solid black;
-	}
-
-}
-/*Fin del Responsive Pagina Blog*/
-
-.principal{
-	grid-area: banner2;
-	margin-top: 120px;
-}
 
 .principal img{
 	width:  100%;
@@ -307,9 +227,6 @@ body{
 }
 
 .letrero3{
-	grid-area: anun3;
-	width: 100%;
-	text-align: center;
 	color: #c786cc;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 4rem;
@@ -317,70 +234,18 @@ body{
 	background-color: #ffa5008f;
 }
 
-.blog1{
-	grid-area: blog1;
-	margin: auto;
-}
-
-.blog1 img{
+.blog img{
 	width:  100%;
 	height: 100%;
 	transition: all 250ms ease-in-out;
 }
 
-.blog1:hover img{
+.blog:hover img{
 	transform: scale(1.2);
 	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-}
-
-
-.blog2{
-	grid-area: blog2;
-	margin: auto;
-}
-
-.blog2 img{
-	width:  100%;
-	height: 100%;
-	transition: all 250ms ease-in-out;
-}
-
-.blog2:hover img{
-	transform: scale(1.2);
-	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-}
-
-.blog3{
-	grid-area: blog3;
-	margin: auto;
-}
-
-.blog3 img{
-	width:  100%;
-	height: 100%;
-	transition: all 250ms ease-in-out;
-}
-
-.blog3:hover img{
-	transform: scale(1.2);
-	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-}
-
-.descrip1{
-	grid-area: anun2;
-}
-
-.descrip2{
-	grid-area: anun2;
-}
-
-.descrip3{
-	grid-area: anun2;
 }
 
 .letras{
-	width: 100%;
-	text-align: center;
 	color: black;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 2rem;
@@ -391,88 +256,40 @@ body{
 
 
 /*Inicio de la Pagina Contacto*/
+
 .fondo{
-	width: 100%;
-	height: 100%;
-	margin: auto;
 	background-image: url('../assets/logo.jpg');
 	background-position: center;
 	background-repeat: repeat;
 }
 
-.formulario{
-	display: flex;
-	flex-direction: column;
-	max-width: 320px;
-	align-items: center;
-	margin: auto;
-	background-color: gray;
-	border: 2px solid black;
-	margin-top: 20px;
-}
-
 .fondo .tituloFormulario{
-	text-align: center;
-	margin-top: 150px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 2rem;
 	font-weight: 700;
-	background-color: gray;
-	border: 2px solid black;
 }
 
-.fondo .letras{
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.2rem;
-	font-weight: 400;
-	color: gray;
-}
-
-.fondo .letra2{
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.2rem;
-	font-weight: 400;
-	color: black;
-}
-
-.formulario input{
-	margin-top: 15px;
-}
-
-.formulario select{
-	margin-top: 15px;
-}
-
-.ubicacion iframe{
-	width: 100%;
+.mapa iframe{
 	height: 150px;
-	margin-top: 20px;
 }
 
 /*Fin de la Pagina Contacto*/
 
 /*Inicio footer*/
-
 #footer{
-	height: 100%;
-	grid-area: footer;
-	margin-bottom: 0;
 	background-color: #261f1f8a;
 }
 
 #footer p{
-	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
 	font-weight: 700;
 	color: white;
-	margin-bottom:0;
 }
 
 #footer .nav img{
 	width: 30px;
 	height: 30px;
 }
-
 /*Fin footer*/
 
