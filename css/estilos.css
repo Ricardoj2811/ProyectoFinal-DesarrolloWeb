@@ -2,88 +2,45 @@
 
 body{
 	font-family: 'Roboto', sans-serif;
+	font-size: 400;
 	}
-
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-}
 
 
 /*Inicio del Header*/
-#header{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
+
+.bg-color{
 	background-color: #261f1f8a;
-	height: 120px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	z-index: 1000;
 }
 
-#header .nav{
-	flex-grow: 1;
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
+.navbar-brand img{
+	height: 50px;
+	width: 50px;
 }
 
-
-#header .nav .active a{
-	color: #ccc;
+.navbar-brand img:hover{
+	transform: scale(1.7)
 }
 
-#header .nav img{
-	width: 80px;
-	height: 80px;
-}
-
-#header .nav img:hover{
-	transform: scale(1.5);
-}
-
-#header .nav a{
+.navbar-nav .nav-item a{
 	color: #000000b0;
-	text-decoration: none;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2rem;
 	font-weight: 700;
 }
 
-#header .nav a:hover{
-	color: orange;
-	font-size: 1.6rem;
+.navbar-nav .nav-item a:hover{
+	color: orange !important;
 }
 
 /*Fin del Header*/
 
+
 /*Inicio Pagina home*/
-.contenedor{
-	display: grid;
-	grid-template-areas: 
-	"banner banner banner"
-	"anun anun anun"
-	"anun2 anun2 anun2"
-	"img1 img2 img3"
-	"footer footer footer";
-	justify-items: start;
-	height: 100vh;
-}
 
 .fondo2{
-	grid-area: banner;
 	background-image: url('../assets/collageHome.png');
 	background-size: cover;
-	align-self: stretch;
-	justify-self: stretch;
-	margin: auto;
-	width: 100%;
+	height: 600px;
 }
 
 @keyframes letrero5{
@@ -97,14 +54,11 @@ box-sizing: border-box;
 }
 
 .fondo2 .letrero{
-	display: flex;
-	flex-direction: column;
 	color: #c786cca1;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 4rem;
 	font-weight: 400;
 	margin-top: 160px;
-	align-items: center;
 	animation-name: letrero5;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
@@ -113,41 +67,21 @@ box-sizing: border-box;
 }
 
 .fondo2 .comprar{
-	display: flex;
-	margin-top: 120px;
-	flex-direction: column;
-	align-items: center;
 	color: black;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 2rem;
 	font-weight: 400;
+	position: absolute;
+	margin-top: 150px;
+	margin-left: -40px;
 }
 
 /*Responsive Home*/
 @media all and (max-width: 768px){
-	.contenedor{
-		display: grid;
-		grid-template-areas: 
-		"banner"
-		"anun"
-		"anun2"
-		"img1"
-		"img2"
-		"img3"
-		"footer";
-		justify-items: start;
-		height: 100vh;
-	}
 
 	.fondo2{
-		grid-area: banner;
 		background-image: url('../assets/fondo2.jpg');
 		background-size: cover;
-		align-self: stretch;
-		justify-self: stretch;
-		margin: auto;
-		height: 100vh;
-		width: 100%;
 		object-fit: contain;
 	}
 
@@ -156,9 +90,8 @@ box-sizing: border-box;
 	}
 
 	.fondo2 .comprar{
-		margin-top: 350px;
+		margin-top: 250px;
 	}
-
 }
 /*fin del responsive Home*/
 
@@ -190,105 +123,49 @@ box-sizing: border-box;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 2rem;
 	font-weight: 400;
-	height: auto;
-}
-
-.anuncio{
-	grid-area: anun;
-	width: 100%;
-	height: auto;
-	text-align: center;
 }
 
 .cartel{
-	grid-area: anun2;
-	width: 100%;
-	height: auto;
-	text-align: center;
 	background-color: orange;
 }
 
-.img1{
-	grid-area: img1;
-	margin: auto;
-}
-
-.img1 img{
-	width:  100%;
-	height:  100%;
-	transition: all 250ms ease-in-out;
-}
-
-.img1:hover img{
-		transform: scale(1.1);
-		box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+@media all and (min-width: 768px){
+	.container{
+		width: 400px !important;
 	}
 
-.img2{
-	grid-area: img2;
-	margin: auto;
-}
-
-.img2 img{
-	width:  100%;
-	height:  100%;
-	transition: all 250ms ease-in-out;
-}
-
-.img2:hover img{
-		transform: scale(1.1);
-		box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+	.carousel-item img{
+		max-height: 400px !important;
 	}
-
-.img3{
-	grid-area: img3;
-	margin: auto;
 }
-
-.img3 img{
-	width: 100%;
-	height:  100%;
-	transition: all 250ms ease-in-out;
-}
-
-.img3:hover img{
-		transform: scale(1.1);
-		box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-	}
 
 /*Fin Pagina home*/
 
 
 /* Inicio pagina Shop*/
 
-.fondo .productos{
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	align-items: center;
-	margin-top: 130px;
+.comienzo{
+	margin-top: 80px !important;
 }
 
-.fondo .productos .nombre{
+.nombre{
 	color: black;
 	font-family: 'Montserrat', sans-serif;
 	background-color: gray;
 	font-size: 2rem;
 	font-weight: 700;
-	border: 2px solid black;
-	margin-bottom: 10px;
 }
 
-.fondo .productos img{
+.imagenes img{
 	height: 180px;
-	max-width: 400px;
-	border: 2px solid black;
-	border-radius: 10px;
+}
+
+.ampliacion{
 	transition: all 250ms ease-in-out;
 }
 
-.productos:hover img{
-	transform: scale(1.2);
+.ampliacion:hover{
+	transform: scale(1.1);
 	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
 }
 
@@ -296,21 +173,13 @@ box-sizing: border-box;
 
 /*Inicio Pagina Nuestra Historia*/
 
-.centrado{
-	display: flex;
-	flex-direction: column;
-	margin-top: 20px;
-	margin-top: auto;
-	align-items: center;
-}
 
 .fondo .letrero{
-	margin-top: 120PX;
 	color: #c786cc;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 5rem;
 	font-weight: 400;
-	animation-name: letrero5;
+	animation-name: letrero6;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	animation-duration: 1s;
@@ -318,10 +187,8 @@ box-sizing: border-box;
 }
 
 
-.fondo .imagenAbout img{
+.imagenAbout img{
 	height: 310px;
-	max-width: 600px;
-	margin: auto;
 }
 
 @media all and (max-width: 768px){
@@ -331,20 +198,14 @@ box-sizing: border-box;
 		font-weight: 400;
 	}
 
-
-	.fondo .imagenAbout img{
-		height: 230px;
-		max-width: 400px;
+	.imagenAbout img{
+	height: 180px;
 	}
 }
 
 .fondo .texto{
 	color: black;
 	font-family: 'Montserrat', sans-serif;
-	margin: auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	max-width: 1200px;
 	font-size: 1.4rem;
 	font-weight: 500;
 }
@@ -354,70 +215,6 @@ box-sizing: border-box;
 
 
 /*Inicio Pagina Blog*/
-.contenedor2{
-	display: grid;
-	grid-template-areas: 
-	"banner2 banner2 banner3"
-	"anun3 anun3 anun3"
-	"blog1 blog2 blog3"
-	"anun2 anun2 anun2"
-	"footer footer footer";
-	grid-column-gap: 3px;
-	justify-items: start;
-	height: 100vh;
-}
-
-.descripcion{
-	grid-area: banner3;
-	margin-top: 120px;
-	border: 5px solid black;
-}
-
-
-/*Inicio del Responsive Pagina Blog*/
-@media all and (max-width: 768px){
-	.contenedor2{
-	display: grid;
-	grid-template-areas: 
-	"banner2"
-	"banner3"
-	"anun3"
-	"blog1"
-	"anun2-1"
-	"blog2"
-	"anun2-2"
-	"blog3"
-	"anun2-3"
-	"footer";
-	grid-column-gap: 3px;
-	justify-items: start;
-	height: 100vh;
-	}
-
-	.descrip1{
-	grid-area: anun2-1;
-	}
-
-	.descrip2{
-		grid-area: anun2-2;
-	}
-
-	.descrip3{
-		grid-area: anun2-3;
-	}
-
-	.descripcion {
-	margin-top: 0;
-	border: 5px solid black;
-	}
-
-}
-/*Fin del Responsive Pagina Blog*/
-
-.principal{
-	grid-area: banner2;
-	margin-top: 120px;
-}
 
 .principal img{
 	width:  100%;
@@ -430,9 +227,6 @@ box-sizing: border-box;
 }
 
 .letrero3{
-	grid-area: anun3;
-	width: 100%;
-	text-align: center;
 	color: #c786cc;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 4rem;
@@ -440,70 +234,18 @@ box-sizing: border-box;
 	background-color: #ffa5008f;
 }
 
-.blog1{
-	grid-area: blog1;
-	margin: auto;
-}
-
-.blog1 img{
+.blog img{
 	width:  100%;
 	height: 100%;
 	transition: all 250ms ease-in-out;
 }
 
-.blog1:hover img{
+.blog:hover img{
 	transform: scale(1.2);
 	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-}
-
-
-.blog2{
-	grid-area: blog2;
-	margin: auto;
-}
-
-.blog2 img{
-	width:  100%;
-	height: 100%;
-	transition: all 250ms ease-in-out;
-}
-
-.blog2:hover img{
-	transform: scale(1.2);
-	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-}
-
-.blog3{
-	grid-area: blog3;
-	margin: auto;
-}
-
-.blog3 img{
-	width:  100%;
-	height: 100%;
-	transition: all 250ms ease-in-out;
-}
-
-.blog3:hover img{
-	transform: scale(1.2);
-	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-}
-
-.descrip1{
-	grid-area: anun2;
-}
-
-.descrip2{
-	grid-area: anun2;
-}
-
-.descrip3{
-	grid-area: anun2;
 }
 
 .letras{
-	width: 100%;
-	text-align: center;
 	color: black;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 2rem;
@@ -514,94 +256,39 @@ box-sizing: border-box;
 
 
 /*Inicio de la Pagina Contacto*/
+
 .fondo{
-	width: 100%;
-	height: 100%;
-	margin: auto;
 	background-image: url('../assets/logo.jpg');
 	background-position: center;
 	background-repeat: repeat;
 }
 
-.formulario{
-	display: flex;
-	flex-direction: column;
-	max-width: 320px;
-	align-items: center;
-	margin: auto;
-	background-color: gray;
-	border: 2px solid black;
-	margin-top: 20px;
-}
-
 .fondo .tituloFormulario{
-	text-align: center;
-	margin-top: 150px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 2rem;
 	font-weight: 700;
-	background-color: gray;
-	border: 2px solid black;
 }
 
-.fondo .letras{
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.2rem;
-	font-weight: 400;
-	color: gray;
-}
-
-.fondo .letra2{
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.2rem;
-	font-weight: 400;
-	color: black;
-}
-
-.formulario input{
-	margin-top: 15px;
-}
-
-.formulario select{
-	margin-top: 15px;
-}
-
-.ubicacion iframe{
-	width: 100%;
+.mapa iframe{
 	height: 150px;
-	margin-top: 20px;
 }
 
 /*Fin de la Pagina Contacto*/
 
 /*Inicio footer*/
 #footer{
-	grid-area: footer;
-	width: 100%;
-	height: 80px;
 	background-color: #261f1f8a;
 }
 
-#footer .redes{
-	list-style-type: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-}
-
 #footer p{
-	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
 	font-weight: 700;
 	color: white;
 }
 
-#footer .redes img{
-	width: 40px;
-	height: 40px;
+#footer .nav img{
+	width: 30px;
+	height: 30px;
 }
-
 /*Fin footer*/
-
