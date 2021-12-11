@@ -3,8 +3,23 @@
 body{
 	font-family: 'Roboto', sans-serif;
 	font-size: 400;
-	}
+}
 
+.font-weight-bold{
+	font-weight: 700;
+}
+
+.font-weight-light{
+	font-weight: 400;
+}
+
+.font-weight-medium{
+	font-weight: 500;
+}
+
+.comienzo{
+	margin-top: 80px !important;
+}
 
 /*Inicio del Header*/
 
@@ -25,7 +40,6 @@ body{
 	color: #000000b0;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2rem;
-	font-weight: 700;
 }
 
 .navbar-nav .nav-item a:hover{
@@ -37,13 +51,13 @@ body{
 
 /*Inicio Pagina home*/
 
-.fondo2{
+.banner-index{
 	background-image: url('../assets/collageHome.png');
 	background-size: cover;
 	height: 600px;
 }
 
-@keyframes letrero5{
+@keyframes letrero-index{
 	0%{
 		color:magenta ;
 	}
@@ -53,24 +67,22 @@ body{
 	}
 }
 
-.fondo2 .letrero{
+.banner-index .letrero-banner{
 	color: #c786cca1;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 4rem;
-	font-weight: 400;
 	margin-top: 160px;
-	animation-name: letrero5;
+	animation-name: letrero-index;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	animation-duration: 1s;
 	animation-delay: 0.01s;
 }
 
-.fondo2 .comprar{
-	color: black;
+.banner-index .boton-comprar{
+	color: #000;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 2rem;
-	font-weight: 400;
 	position: absolute;
 	margin-top: 150px;
 	margin-left: -40px;
@@ -79,24 +91,24 @@ body{
 /*Responsive Home*/
 @media all and (max-width: 768px){
 
-	.fondo2{
+	.banner-index{
 		background-image: url('../assets/fondo2.jpg');
 		background-size: cover;
 		object-fit: contain;
 	}
 
-	.fondo2 .letrero{
+	.banner-index .letrero-banner{
 		font-size: 2.2rem;
 	}
 
-	.fondo2 .comprar{
+	.banner-index .boton-comprar{
 		margin-top: 250px;
 	}
 }
 /*fin del responsive Home*/
 
 
-@keyframes letrero6{
+@keyframes letrero-animado{
 	0%{
 		color:#c786cc ;
 	}
@@ -106,31 +118,27 @@ body{
 	}
 }
 
-.letrero2{
+.letrero-descuento{
 	color: pink;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 2rem;
-	font-weight: 400;
-	animation-name: letrero6;
+	animation-name: letrero-animado;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	animation-duration: 1s;
 	animation-delay: 0.01s;
 }
 
-.letrero4{
+.letrero-codigo{
 	color: pink;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 2rem;
-	font-weight: 400;
-}
-
-.cartel{
 	background-color: orange;
 }
 
+
 @media all and (min-width: 768px){
-	.container{
+	.carousel{
 		width: 400px !important;
 	}
 
@@ -144,27 +152,23 @@ body{
 
 /* Inicio pagina Shop*/
 
-.comienzo{
-	margin-top: 80px !important;
-}
-
-.nombre{
+.descripcion-shop{
 	color: black;
 	font-family: 'Montserrat', sans-serif;
 	background-color: gray;
 	font-size: 2rem;
-	font-weight: 700;
 }
 
-.imagenes img{
+.container-shop{
+	width: 400px !important;
+}
+
+.imagenes-shop{
+	transition: all 250ms ease-in-out;
 	height: 180px;
 }
 
-.ampliacion{
-	transition: all 250ms ease-in-out;
-}
-
-.ampliacion:hover{
+.imagenes-shop:hover{
 	transform: scale(1.1);
 	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
 }
@@ -173,19 +177,16 @@ body{
 
 /*Inicio Pagina Nuestra Historia*/
 
-
-.fondo .letrero{
+.fondo .letrero-historia{
 	color: #c786cc;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 5rem;
-	font-weight: 400;
-	animation-name: letrero6;
+	animation-name: letrero-animado;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	animation-duration: 1s;
 	animation-delay: 0.01s;
 }
-
 
 .imagenAbout img{
 	height: 310px;
@@ -193,9 +194,8 @@ body{
 
 @media all and (max-width: 768px){
 
-	.fondo .letrero{
+	.fondo .letrero-historia{
 		font-size: 3rem;
-		font-weight: 400;
 	}
 
 	.imagenAbout img{
@@ -203,11 +203,10 @@ body{
 	}
 }
 
-.fondo .texto{
+.fondo .texto-historia{
 	color: black;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1.4rem;
-	font-weight: 500;
+	font-size: 1.2rem;
 }
 
 
@@ -216,7 +215,7 @@ body{
 
 /*Inicio Pagina Blog*/
 
-.principal img{
+.imagen-principal-blog img{
 	width:  100%;
 	height:  100%;
 }
@@ -224,14 +223,12 @@ body{
 .descripcion p{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.2rem;
-	font-weight: 500;
 }
 
-.letrero3{
+.letrero-blog{
 	color: #c786cc;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 4rem;
-	font-weight: 400;
 	background-color: #ffa5008f;
 }
 
@@ -246,11 +243,10 @@ body{
 	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
 }
 
-.letras{
+.letras-blog{
 	color: black;
 	font-family: 'Bebas Neue', cursive;
 	font-size: 2rem;
-	font-weight: 400;
 }
 
 /*Fin de la Pagina blog*/
@@ -267,16 +263,12 @@ body{
 .fondo .tituloFormulario{
 	font-family: 'Roboto', sans-serif;
 	font-size: 2rem;
-	font-weight: 700;
 }
 
 @media all and (max-width: 768px){
 	.fondo .tituloFormulario{
-	font-family: 'Roboto', sans-serif;
 	font-size: 1.2rem;
-	font-weight: 700;
-}
-
+	}
 }
 
 .mapa iframe{
@@ -293,7 +285,6 @@ body{
 #footer p{
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
-	font-weight: 700;
 	color: white;
 }
 
