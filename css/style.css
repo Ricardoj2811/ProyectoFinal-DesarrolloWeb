@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle:wght@300;400;700&family=Montserrat:wght@400;600;800&family=Roboto:ital,wght@0,100;0,700;1,400&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; }
+
+.font-weight-bold {
+  font-weight: 700; }
+
+.font-weight-light {
+  font-weight: 300; }
+
+.font-weight-medium {
+  font-weight: 400; }
+
+.comienzo {
+  margin-top: 80px !important; }
+
+.bg-color {
+  background-color: #261f1f8a; }
+
+.color-pink, .letrero-descuento, .letrero-codigo {
+  color: pink; }
+
+.navbar-brand img {
+  height: 50px;
+  width: 50px; }
+  .navbar-brand img:hover {
+    transform: scale(1.7); }
+
+.navbar-nav .nav-item a {
+  color: #000000b0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem; }
+  .navbar-nav .nav-item a:hover {
+    color: orange !important; }
+
+@keyframes letrero-index {
+  0% {
+    color: magenta; }
+  100% {
+    color: orange; } }
+
+.banner-index {
+  background-image: url("../assets/collageHome.png");
+  background-size: cover;
+  height: 600px; }
+  @media all and (max-width: 768px) {
+    .banner-index {
+      background-image: url("../assets/fondo2.jpg");
+      background-size: cover;
+      object-fit: contain; } }
+  .banner-index .letrero-banner {
+    color: #c786cca1;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+    margin-top: 160px;
+    animation-name: letrero-index;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 0.01s; }
+    @media all and (max-width: 768px) {
+      .banner-index .letrero-banner {
+        font-size: 2.2rem; } }
+  .banner-index .boton-comprar {
+    color: #000;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: -40px; }
+    @media all and (max-width: 768px) {
+      .banner-index .boton-comprar {
+        margin-top: 250px; } }
+
+@keyframes letrero-animado {
+  0% {
+    color: #c786cc; }
+  100% {
+    color: magenta; } }
+
+.letrero-descuento {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  animation-name: letrero-animado;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 0.01s; }
+
+.letrero-codigo {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  background-color: orange; }
+
+.carousel-item img {
+  max-height: 400px !important; }
+
+.descripcion-shop {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  background-color: gray;
+  font-size: 2rem; }
+
+.imagenes-shop {
+  transition: all 250ms ease-in-out;
+  height: 180px; }
+  .imagenes-shop:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
+
+.fondo {
+  background-image: url("../assets/logo.jpg");
+  background-position: center;
+  background-repeat: repeat; }
+  .fondo .letrero-historia {
+    color: #c786cc;
+    font-size: 5rem;
+    font-family: 'Bebas Neue', cursive;
+    animation-name: letrero-animado;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 0.01s; }
+    @media all and (max-width: 768px) {
+      .fondo .letrero-historia {
+        font-size: 3rem; } }
+  .fondo .texto-historia {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem; }
+  .fondo .tituloFormulario {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem; }
+    @media all and (max-width: 768px) {
+      .fondo .tituloFormulario {
+        font-size: 1.2rem; } }
+
+.imagenAbout img {
+  height: 310px; }
+  @media all and (max-width: 768px) {
+    .imagenAbout img {
+      height: 180px; } }
+
+.imagen-principal-blog img {
+  width: 100%;
+  height: 100%; }
+
+.descripcion p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem; }
+
+.letrero-blog {
+  color: #c786cc;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 4rem;
+  background-color: #ffa5008f; }
+
+.blog img {
+  width: 100%;
+  height: 100%;
+  transition: all 250ms ease-in-out; }
+  .blog img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
+
+.letras-blog {
+  color: #000;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem; }
+
+.mapa iframe {
+  height: 150px; }
+
+#footer {
+  background-color: #261f1f8a; }
+  #footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: white; }
+  #footer .nav img {
+    width: 30px;
+    height: 30px; }

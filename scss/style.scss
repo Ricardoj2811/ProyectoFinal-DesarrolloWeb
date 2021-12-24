@@ -1,0 +1,270 @@
+@import "fuentes";
+@import "variables";
+@import "tools";
+
+body{
+	@include font_family_roboto()
+	font-weight: map-get($miMap, light);
+}
+
+.font-weight-bold{
+	font-weight: map-get($miMap, bold);
+}
+
+.font-weight-light{
+	font-weight: map-get($miMap, light);
+}
+
+.font-weight-medium{
+	font-weight: map-get($miMap, medium);
+}
+
+.comienzo{
+	margin-top: 80px !important;
+}
+
+.bg-color{
+	background-color: $bg-color-header;
+}
+
+.color-pink{
+	color: pink;
+}
+
+.navbar-brand{
+
+	img{
+		height: 50px;
+		width: 50px;
+
+		&:hover{
+			transform: scale(1.7)
+		}
+	}
+}
+
+.navbar-nav{
+	.nav-item{
+		a{
+			color: $color-navbar-letras;
+			@include font_family_roboto()
+			font-size: 1.2rem;
+
+			&:hover{
+				color: $color-navbar-letras-hover !important;
+			}
+		}
+	}
+}
+
+@keyframes letrero-index{
+	0%{
+		color: magenta ;
+	}
+
+	100%{
+		color: orange;
+	}
+}
+
+.banner-index{
+	background-image: url('../assets/collageHome.png');
+	background-size: cover;
+	height: 600px;
+
+	@media all and (max-width: $point-md){
+		background-image: url('../assets/fondo2.jpg');
+		background-size: cover;
+		object-fit: contain;
+	}
+
+	.letrero-banner{
+		color: $color-letro-banner-index;
+		@include font_family_bebas()
+		font-size: 4rem;
+		margin-top: 160px;
+		animation-name: letrero-index;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-duration: 1s;
+		animation-delay: 0.01s;
+
+		@media all and (max-width: $point-md){
+			font-size: 2.2rem;
+		}
+	}
+
+	.boton-comprar{
+		color: $color-boton-comprar-index;
+		@include font_family_bebas()
+		font-size: 2rem;
+		position: absolute;
+		margin-top: 150px;
+		margin-left: -40px;
+
+		@media all and (max-width: $point-md){
+			margin-top: 250px;
+		}
+	}
+}
+
+@keyframes letrero-animado{
+	0%{
+		color:#c786cc ;
+	}
+
+	100%{
+		color: magenta;
+	}
+}
+
+.letrero-descuento{
+	@extend .color-pink;
+	@include font_family_bebas()
+	font-size: 2rem;
+	animation-name: letrero-animado;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-delay: 0.01s;
+}
+
+.letrero-codigo{
+	@extend .color-pink;
+	@include font_family_bebas()
+	font-size: 2rem;
+	background-color: orange;
+}
+
+.carousel-item{
+
+	img{
+		max-height: 400px !important;
+	}
+}
+
+.descripcion-shop{
+	color: $color-shop-letras;
+	@include font_family_montserrat()
+	background-color: gray;
+	font-size: 2rem;
+}
+
+.imagenes-shop{
+	transition: all 250ms ease-in-out;
+	height: 180px;
+	
+	&:hover{
+		transform: scale(1.1);
+		box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+	}
+}
+
+.fondo{
+	background-image: url('../assets/logo.jpg');
+	background-position: center;
+	background-repeat: repeat;
+
+	.letrero-historia{
+		color: $color-letrero-historia;
+		font-size: 5rem;
+		@include font_family_bebas()
+		animation-name: letrero-animado;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-duration: 1s;
+		animation-delay: 0.01s;
+
+		@media all and (max-width: $point-md){
+			font-size: 3rem;
+		}
+	}
+
+	.texto-historia{
+		color: $color-historia-letras;
+		@include font_family_montserrat()
+		font-size: 1.2rem;
+	}
+	
+	.tituloFormulario{
+		@include font_family_roboto()
+		font-size: 2rem;
+
+		@media all and (max-width: $point-md){
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.imagenAbout{
+	img{
+		height: 310px;
+
+		@media all and (max-width: $point-md){
+			height: 180px;
+		}
+	}
+}
+
+.imagen-principal-blog{
+	img{
+		width:  100%;
+		height:  100%;
+	}
+}
+
+.descripcion{
+	p{
+		@include font_family_montserrat()
+		font-size: 1.2rem;
+	}
+}
+
+.letrero-blog{
+	color: #c786cc;
+	@include font_family_bebas()
+	font-size: 4rem;
+	background-color: #ffa5008f;
+}
+
+.blog{
+	img{
+		width: 100%;
+		height: 100%;
+		transition: all 250ms ease-in-out;
+
+		&:hover{
+			transform: scale(1.2);
+			box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+		}
+	}
+}
+
+.letras-blog{
+	color: $color-blog-letras;
+	@include font_family_bebas()
+	font-size: 2rem;
+}
+
+.mapa{
+	iframe{
+		height: 150px;
+	}
+}
+
+#footer{
+	background-color: $bg-footer;
+
+	p{
+		@include font_family_roboto()
+		font-size: 1rem;
+		color: $color-footer-letras;
+	}
+
+	.nav{
+		img{
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
