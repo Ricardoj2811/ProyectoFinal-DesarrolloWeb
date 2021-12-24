@@ -136,11 +136,19 @@ body{
 	background-color: orange;
 }
 
+.carousel{
+	max-width: 400px !important;
+}
+
 .carousel-item{
 
 	img{
 		max-height: 400px !important;
 	}
+}
+
+.container-shop{
+	max-width: 400px !important;
 }
 
 .descripcion-shop{
