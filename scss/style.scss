@@ -98,9 +98,7 @@ body{
 		color: $color-boton-comprar-index;
 		@include font_family_bebas()
 		font-size: 2rem;
-		position: absolute;
 		margin-top: 150px;
-		margin-left: -40px;
 
 		@media all and (max-width: $point-md){
 			margin-top: 250px;
@@ -136,26 +134,30 @@ body{
 	background-color: orange;
 }
 
-.carousel{
-	max-width: 400px !important;
-}
-
-.carousel-item{
+.carousel-img{
 
 	img{
-		max-height: 400px !important;
+		max-width: 400px !important;
 	}
-}
-
-.container-shop{
-	max-width: 400px !important;
 }
 
 .descripcion-shop{
 	color: $color-shop-letras;
-	@include font_family_montserrat()
-	background-color: gray;
+	@include font_family_roboto()
+	background-color: $bg-titulos-shop;
 	font-size: 2rem;
+	max-width: 280px;
+}
+
+.letras-modal{
+	@include font_family_roboto()
+	color: black;
+}
+
+.nav-link{
+	&:hover{
+		color: white !important;
+	}
 }
 
 .imagenes-shop{
@@ -186,6 +188,7 @@ body{
 		@media all and (max-width: $point-md){
 			font-size: 3rem;
 		}
+
 	}
 
 	.texto-historia{
@@ -200,6 +203,19 @@ body{
 
 		@media all and (max-width: $point-md){
 			font-size: 1.2rem;
+		}
+	}
+
+	.boton-compra{
+		color: $color-boton-comprar-index;
+		@include font_family_bebas()
+		font-size: 1.2rem;
+		background-color: gray;
+		margin-bottom: 20px;
+
+		&:hover{
+			transform: scale(1.2);
+			box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
 		}
 	}
 }
