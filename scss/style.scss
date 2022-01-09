@@ -119,12 +119,16 @@ body{
 .letrero-descuento{
 	@extend .color-pink;
 	@include font_family_bebas()
+	background-color: $bg-letrero-descuento;
 	font-size: 2rem;
 	animation-name: letrero-animado;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	animation-duration: 1s;
 	animation-delay: 0.01s;
+	@media all and (max-width: $point-md){
+			font-size: 1.5rem;
+		}
 }
 
 .letrero-codigo{
@@ -138,6 +142,8 @@ body{
 
 	img{
 		max-width: 400px !important;
+		height: 450px;
+		object-fit: contain;
 	}
 }
 
@@ -163,9 +169,10 @@ body{
 .imagenes-shop{
 	transition: all 250ms ease-in-out;
 	height: 180px;
+	width: 150px;
 	
 	&:hover{
-		transform: scale(1.1);
+		transform: scale(1.5);
 		box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
 	}
 }
@@ -200,17 +207,32 @@ body{
 	.tituloFormulario{
 		@include font_family_roboto()
 		font-size: 2rem;
+		max-width: 600px;
+		background-color: $bg-formulario;
 
 		@media all and (max-width: $point-md){
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 		}
+	}
+
+	.formulario{
+		max-width: 600px;
+		background-color: $bg-formulario;
+	}
+
+	.boton-enviar{
+		color: $color-boton-comprar-index;
+		@include font_family_bebas()
+		font-size: 1.2rem;
+		background-color: $botones;
+		margin-bottom: 20px;
 	}
 
 	.boton-compra{
 		color: $color-boton-comprar-index;
 		@include font_family_bebas()
 		font-size: 1.2rem;
-		background-color: gray;
+		background-color: $botones;
 		margin-bottom: 20px;
 
 		&:hover{
@@ -232,16 +254,14 @@ body{
 
 .imagen-principal-blog{
 	img{
-		width:  100%;
-		height:  100%;
+		max-width: 450px;
 	}
 }
 
 .descripcion{
-	p{
 		@include font_family_montserrat()
 		font-size: 1.2rem;
-	}
+		max-width: 800px;
 }
 
 .letrero-blog{
@@ -249,6 +269,10 @@ body{
 	@include font_family_bebas()
 	font-size: 4rem;
 	background-color: #ffa5008f;
+}
+
+.imagenes-blog{
+	max-width: 250px;
 }
 
 .blog{
@@ -264,6 +288,13 @@ body{
 	}
 }
 
+.titulo-blog{
+	@include font_family_bebas()
+	font-size: 2rem;
+	background-color: $bg-titulo-blog;
+	max-width: 500px;
+}
+
 .letras-blog{
 	color: $color-blog-letras;
 	@include font_family_bebas()
@@ -273,6 +304,7 @@ body{
 .mapa{
 	iframe{
 		height: 150px;
+		max-width: 600px;
 	}
 }
 
