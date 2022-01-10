@@ -184,7 +184,7 @@ body{
 
 	.letrero-historia{
 		color: $color-letrero-historia;
-		font-size: 5rem;
+		font-size: 3rem;
 		@include font_family_bebas()
 		animation-name: letrero-animado;
 		animation-iteration-count: infinite;
@@ -193,7 +193,7 @@ body{
 		animation-delay: 0.01s;
 
 		@media all and (max-width: $point-md){
-			font-size: 3rem;
+			font-size: 1.7rem;
 		}
 
 	}
@@ -203,6 +203,10 @@ body{
 		@include font_family_montserrat()
 		font-size: 1.2rem;
 	}
+
+	.imagenes-historia{
+		height: 200px;
+	}
 	
 	.tituloFormulario{
 		@include font_family_roboto()
@@ -211,7 +215,8 @@ body{
 		background-color: $bg-formulario;
 
 		@media all and (max-width: $point-md){
-			font-size: 1.1rem;
+			font-size: 1.3rem;
+			max-width: 280px;
 		}
 	}
 
@@ -226,20 +231,20 @@ body{
 		font-size: 1.2rem;
 		background-color: $botones;
 		margin-bottom: 20px;
-	}
 
-	.boton-compra{
+		&:hover{
+			background-color: black;
+			color: white;
+		}
+	}
+}
+
+.boton-compra{
 		color: $color-boton-comprar-index;
 		@include font_family_bebas()
 		font-size: 1.2rem;
 		background-color: $botones;
 		margin-bottom: 20px;
-
-		&:hover{
-			transform: scale(1.2);
-			box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-		}
-	}
 }
 
 .imagenAbout{
@@ -262,6 +267,9 @@ body{
 		@include font_family_montserrat()
 		font-size: 1.2rem;
 		max-width: 800px;
+		@media all and (max-width: $point-md){
+			font-size: 1rem;
+		}
 }
 
 .letrero-blog{
@@ -293,6 +301,10 @@ body{
 	font-size: 2rem;
 	background-color: $bg-titulo-blog;
 	max-width: 500px;
+
+	@media all and (max-width: $point-md){
+			font-size: 1.5rem;
+	}
 }
 
 .letras-blog{
