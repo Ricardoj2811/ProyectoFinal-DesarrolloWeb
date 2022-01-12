@@ -100,6 +100,11 @@ body{
 		font-size: 2rem;
 		margin-top: 150px;
 
+		&:hover{
+			background-color: $boton-comprar-index;
+			color: white;
+		}
+
 		@media all and (max-width: $point-md){
 			margin-top: 250px;
 		}
@@ -153,6 +158,7 @@ body{
 	background-color: $bg-titulos-shop;
 	font-size: 2rem;
 	max-width: 280px;
+	border: 2px solid #0000002b;
 }
 
 .letras-modal{
@@ -170,6 +176,7 @@ body{
 	transition: all 250ms ease-in-out;
 	height: 180px;
 	width: 150px;
+	border: 2px solid #0000002b;
 	
 	&:hover{
 		transform: scale(1.5);
@@ -213,6 +220,7 @@ body{
 		font-size: 2rem;
 		max-width: 600px;
 		background-color: $bg-formulario;
+		border: 2px solid #0000002b;
 
 		@media all and (max-width: $point-md){
 			font-size: 1.3rem;
@@ -231,20 +239,29 @@ body{
 		font-size: 1.2rem;
 		background-color: $botones;
 		margin-bottom: 20px;
+		border: 2px solid #68616140;
 
 		&:hover{
 			background-color: black;
 			color: white;
 		}
 	}
+
+	.letras-precio-shop{
+		font-size: 0.8rem;
+		@include font_family_montserrat()
+	}
 }
 
 .boton-compra{
 		color: $color-boton-comprar-index;
 		@include font_family_bebas()
-		font-size: 1.2rem;
+		font-size: 1rem;
 		background-color: $botones;
 		margin-bottom: 20px;
+		height: 37px;
+		border: 2px solid #68616140;
+
 }
 
 .imagenAbout{
@@ -301,6 +318,7 @@ body{
 	font-size: 2rem;
 	background-color: $bg-titulo-blog;
 	max-width: 500px;
+	border: 2px solid #0000002b;
 
 	@media all and (max-width: $point-md){
 			font-size: 1.5rem;
