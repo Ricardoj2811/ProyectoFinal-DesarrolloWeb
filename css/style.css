@@ -147,8 +147,12 @@ body {
     color: #000;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem; }
-  .fondo .imagenes-historia {
-    height: 200px; }
+  .fondo .subtitulos-blog {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+    background-color: #f2bd5ca3;
+    max-width: 400px;
+    border: 2px solid #0000002b; }
   .fondo .tituloFormulario {
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
@@ -209,13 +213,13 @@ body {
   background-color: #ffa5008f; }
 
 .imagenes-blog {
-  max-width: 250px; }
+  max-width: 400px; }
 
-.blog img {
+.blog-img {
   width: 100%;
   height: 100%;
   transition: all 250ms ease-in-out; }
-  .blog img:hover {
+  .blog-img:hover {
     transform: scale(1.2);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
 
